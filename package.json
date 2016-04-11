@@ -1,0 +1,17 @@
+{
+  "name": "es6Test",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "budo index.js --live"
+  },
+  "author": "Do Viet Hung <viethung097@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.5.2"
+  },
+  "browserify": {
+    "transform": ["babelify"]
+  }
+}
