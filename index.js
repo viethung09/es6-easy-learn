@@ -1,26 +1,26 @@
 "use strict"
 
-function greet() {
-
-  for (var i = 0; i < 10; i++) {
-    console.log(i);
+class Person {
+  constructor(firstname, lastname) {
+    this.firstname = firstname;
+    this.lastname = lastname;
   }
-  // i visible here.
-  console.log("i = " + i);
-
 }
 
-greet()
+var p = new Person("Han", "Solo");
+console.log(p);
 
-console.log("----------------------------");
+class Employee extends Person {
 
+  // A class body can only contain methods, but not data properties.
+  // Prototypes having data properties is generally considered an anti-pattern, so this just enforces a best practice.
+  // this.idName = 4564756; // failed
 
-// let is scoped to the nearest enclosing block ( the for loop )
-function letKeywordScope() {
-  for (let i = 0; i < 10; i++) {
-    console.log(i);
+  doWork() {
+    console.log("do work...");
   }
-  //console.log(i); // error: i is not define in here.
 }
 
-letKeywordScope()
+var em = new Employee();
+
+console.log(em);
